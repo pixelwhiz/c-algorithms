@@ -1,6 +1,0 @@
-[submodule "sorting"]
-	path = sorting
-	url = https://github.com/pixelwhiz/c-algorithms/sorting
-[submodule "searching"]
-	path = searching
-	url = https://github.com/pixelwhiz/c-algorithms/searching
