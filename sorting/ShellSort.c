@@ -5,7 +5,7 @@ void ascendingSort(int array[], int size) {
     for(int i = 0; i < size; i++) {
         sortedArray[i] = array[i];
     }
-
+    
     for(int gap = size/2; gap > 0; gap /= 2) {
         for(int i = gap; i < size; i++) {
             int temp = sortedArray[i];
