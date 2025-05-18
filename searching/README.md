@@ -1,5 +1,3 @@
-# 📖 searching
-
 ## Table of Contents
 
 - [Bubble Sort](#bubble-sort)
