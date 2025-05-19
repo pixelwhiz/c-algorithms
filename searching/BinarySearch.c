@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 #include "stdio.h"
-#include <stdbool.h>
 
 void bubbleSort(int array[], int size) {
     for(int i = 0; i < size-1; i++) {
@@ -20,7 +18,7 @@ void bubbleSort(int array[], int size) {
 int binarySearch(int array[], int size, int key) {
     int indexAwal = 0;
     int indexAkhir = size - 1;
-    
+
     while (indexAwal <= indexAkhir) {
         int indexTengah = array[(indexAwal + indexAkhir) / 2];
 
@@ -76,5 +74,3 @@ int main() {
     printf("\n");
     return 0;
 }
-=======
->>>>>>> f577c4a60bd4c06b510b14507e49de090604173f
