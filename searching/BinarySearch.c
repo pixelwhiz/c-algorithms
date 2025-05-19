@@ -20,22 +20,20 @@ int binarySearch(int array[], int size, int key) {
     int indexAkhir = size - 1;
 
     while (indexAwal <= indexAkhir) {
-        int indexTengah = array[(indexAwal + indexAkhir) / 2];
+        int indexTengah = (indexAwal + indexAkhir) / 2;
 
-        if (indexTengah < key) {
-            indexAkhir = indexTengah - 1;
-        } else {
-            indexAwal = indexTengah + 1;
-        }
-
-        if (indexTengah == key) {
+        if (array[indexTengah] == key) {
             return indexTengah;
+        } else if (array[indexTengah] < key) {
+            indexAwal = indexTengah + 1;
+        } else {
+            indexAkhir = indexTengah - 1;
         }
-
     }
 
     return -1;
 }
+
 
 int main() {
     int size = 10;
