@@ -7,6 +7,10 @@ void descendingSort(int array[], int size);
 void mergeAscending(int array[], int left, int mid, int right);
 void mergeDescending(int array[], int left, int mid, int right);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f577c4a60bd4c06b510b14507e49de090604173f
 void mergeAscending(int array[], int left, int mid, int right) {
     int leftSize = mid - left + 1;
     int rightSize = right - mid;

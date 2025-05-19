@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "stdio.h"
 #include <stdbool.h>
 
@@ -75,3 +76,5 @@ int main() {
     printf("\n");
     return 0;
 }
+=======
+>>>>>>> f577c4a60bd4c06b510b14507e49de090604173f
