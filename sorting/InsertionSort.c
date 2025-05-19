@@ -29,9 +29,9 @@ void ascendingSort(int array[], int size) {
         printf("%d ", sortedArray[i]);
     }
 
-    printf("\nJumlah perbandingan: %d", comparisons);
-    printf("\nJumlah pergeseran: %d", shifts);
-    printf("\nJumlah penyisipan: %d\n", insertions);
+    printf("\nTotal comparison: %d", comparisons);
+    printf("\nTotal shift: %d", shifts);
+    printf("\nTotal insertion: %d\n", insertions);
 }
 
 void descendingSort(int array[], int size) {
@@ -63,22 +63,22 @@ void descendingSort(int array[], int size) {
         printf("%d ", sortedArray[i]);
     }
 
-    printf("\nJumlah perbandingan: %d", comparisons);
-    printf("\nJumlah pergeseran: %d", shifts);
-    printf("\nJumlah penyisipan: %d\n", insertions);
+    printf("\nTotal comparison: %d", comparisons);
+    printf("\nTotal shift: %d", shifts);
+    printf("\nTotal insertion: %d\n", insertions);
 }
 
 int main() {
     int array[10];
     int maxInput = 10;
 
-    printf("Masukkan 10 bilangan integer: \n");
+    printf("Enter 10 integer number: \n");
     for (int i = 0; i < maxInput; i++) {
-        printf("Input ke-%d: ", i + 1);
+        printf("Input %d: ", i + 1);
         scanf("%d", &array[i]);
     }
 
-    printf("\nInput yang anda masukkan: ");
+    printf("\nEntered input: ");
     for (int i = 0; i < maxInput; i++) {
         printf("%d ", array[i]);
     }

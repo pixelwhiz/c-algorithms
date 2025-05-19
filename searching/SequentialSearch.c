@@ -1,3 +1,5 @@
-//
-// Created by ASUS on 18/05/2025.
-//
+#include "stdio.h"
+
+int main () {
+    return 0;
+}
