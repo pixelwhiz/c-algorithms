@@ -1,4 +1,4 @@
 ## Table of Contents
 
-- [Binary Sort](#binary-sort)
-- [Sequential Sort](#sequential-sort)
+- [Binary Search](#binary-search)
+- [Sequential Search](#sequential-search)
