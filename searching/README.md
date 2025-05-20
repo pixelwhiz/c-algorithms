@@ -1,4 +1,4 @@
 ## Table of Contents
 
-- [Bubble Sort](#bubble-sort)
-- [Insertion Sort](#insertion-sort)
+- [Binary Sort](#binary-sort)
+- [Sequential Sort](#sequential-sort)
