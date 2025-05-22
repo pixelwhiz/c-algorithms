@@ -1,17 +1,17 @@
 #include "stdio.h"
 
-void bubbleSort(int array[], int size) {
-    for(int i = 0; i < size-1; i++) {
-        int swapped = 0;
-        for(int j = 0; j < size-i-1; j++) {
-            if(array[j] > array[j+1]) {
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
-                swapped = 1;
-            }
+void insertionSort(int array[], int size) {
+    for (int i = 1; i < size; i++) {
+
+        int key = array[i];
+        int j = i - 1;
+
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
         }
-        if(!swapped) break;
+
+        array[j + 1] = key;
     }
 }
 
@@ -45,16 +45,16 @@ int main() {
     scanf("%d", &key);
 
     printf("Masukkan Data \n");
-    for (int i = 0; i < size; i++) {
-        printf("Data ke-%d: ", i + 1);
-        scanf("%d", &array[i]);
+        for (int i = 0; i < size; i++) {
+            printf("Data ke-%d: ", i + 1);
+            scanf("%d", &array[i]);
     }
     /*=============== Input ====================*/
 
 
 
     /*=============== Output ====================*/
-    bubbleSort(array, size);
+    insertionSort(array, size);
     printf("\nData yang telah dimasukkan dan disorting: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", array[i]);
