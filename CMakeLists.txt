@@ -3,4 +3,4 @@ project(Tugas_7 C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(Tugas_7 searching/BinarySearch.c)
+add_executable(Tugas_7 tree/TraversalPreOrder.c)

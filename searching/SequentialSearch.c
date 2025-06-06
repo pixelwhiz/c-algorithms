@@ -2,9 +2,9 @@
 
 int sequentialSearch(int array[], int size, int key) {
     int index = 0;
-    int indexAkhir = size - 1;
+    int endIndex = size - 1;
 
-    while (index <= indexAkhir) {
+    while (index <= endIndex) {
         if (array[index] == key) {
             return index;
         } else {
@@ -22,28 +22,27 @@ int main () {
     int key;
 
     /*====================== Input ======================*/
-    printf("Masukkan key: ");
+    printf("Enter the key to search: ");
     scanf("%d", &key);
 
-    printf("Masukkan data\n");
+    printf("Enter %d numbers:\n", size);
     for (int i = 0; i < size; ++i) {
-        printf("Data ke-%d: ", i + 1);
+        printf("Data %d: ", i + 1);
         scanf("%d", &array[i]);
     }
     /*====================== Input ======================*/
 
-
     /*====================== Output ======================*/
-    printf("\nData yang telah dimasukkan: ");
+    printf("\nEntered data: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", array[i]);
     }
 
     int index = sequentialSearch(array, size, key);
     if (index != -1) {
-        printf("\nKey %d telah ditemukan di Index ke %d", key, sequentialSearch(array, size, key));
+        printf("\nKey %d was found at index %d", key, index);
     } else {
-        printf("\nKey %d tidak di temukan", key);
+        printf("\nKey %d was not found", key);
     }
     /*====================== Output ======================*/
 

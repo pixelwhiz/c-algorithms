@@ -2,7 +2,6 @@
 
 void insertionSort(int array[], int size) {
     for (int i = 1; i < size; i++) {
-
         int key = array[i];
         int j = i - 1;
 
@@ -16,24 +15,23 @@ void insertionSort(int array[], int size) {
 }
 
 int binarySearch(int array[], int size, int key) {
-    int indexAwal = 0;
-    int indexAkhir = size - 1;
+    int startIndex = 0;
+    int endIndex = size - 1;
 
-    while (indexAwal <= indexAkhir) {
-        int indexTengah = (indexAwal + indexAkhir) / 2;
+    while (startIndex <= endIndex) {
+        int middleIndex = (startIndex + endIndex) / 2;
 
-        if (array[indexTengah] == key) {
-            return indexTengah;
-        } else if (array[indexTengah] < key) {
-            indexAwal = indexTengah + 1;
+        if (array[middleIndex] == key) {
+            return middleIndex;
+        } else if (array[middleIndex] < key) {
+            startIndex = middleIndex + 1;
         } else {
-            indexAkhir = indexTengah - 1;
+            endIndex = middleIndex - 1;
         }
     }
 
     return -1;
 }
-
 
 int main() {
     int size = 10;
@@ -41,33 +39,30 @@ int main() {
     int key;
 
     /*=============== Input ====================*/
-    printf("Masukkan key: ");
+    printf("Enter the key to search: ");
     scanf("%d", &key);
 
-    printf("Masukkan Data \n");
-        for (int i = 0; i < size; i++) {
-            printf("Data ke-%d: ", i + 1);
-            scanf("%d", &array[i]);
+    printf("Enter %d numbers:\n", size);
+    for (int i = 0; i < size; i++) {
+        printf("Data %d: ", i + 1);
+        scanf("%d", &array[i]);
     }
     /*=============== Input ====================*/
 
-
-
     /*=============== Output ====================*/
     insertionSort(array, size);
-    printf("\nData yang telah dimasukkan dan disorting: ");
+    printf("\nSorted data: ");
     for (int i = 0; i < size; i++) {
         printf("%d ", array[i]);
     }
 
     int index = binarySearch(array, size, key);
     if (index != -1) {
-        printf("\nKey %d telah ditemukan di Index ke %d", key, binarySearch(array, size, key));
+        printf("\nKey %d found at index %d", key, index);
     } else {
-        printf("\nKey %d tidak di temukan", key);
+        printf("\nKey %d not found", key);
     }
     /*=============== Output ====================*/
-
 
     printf("\n");
     return 0;
