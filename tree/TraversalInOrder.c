@@ -16,7 +16,7 @@ typedef struct Node {
 
 struct Node* createNode(int data) {
     struct Node *n;
-    n = (struct node *) malloc(sizeof(struct Node));
+    n = (struct Node *) malloc(sizeof(struct Node));
     n->data = data;
     n->left = NULL;
     n->right = NULL;
