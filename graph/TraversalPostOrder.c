@@ -1,18 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <malloc.h>
 
 /*
  *
- * Traversal Pre Order: Root -> Left Subtree -> Right Subtree
+ * Traversal Post Order: Left Subtree -> Right Subtree -> Root
  * Includes searching for a specific element
  *
  * */
 
 struct Node {
     int data;
-    struct Node *left;
-    struct Node *right;
-} Node;
+    struct Node* left;
+    struct Node* right;
+};
 
 struct Node* createNode(int data) {
     struct Node *n;
@@ -23,11 +23,11 @@ struct Node* createNode(int data) {
     return n;
 }
 
-void preOrder(struct Node* root) {
+void postOrder(struct Node* root) {
     if (root != NULL) {
+        postOrder(root->left);
+        postOrder(root->right);
         printf("%d ", root->data);
-        preOrder(root->left);
-        preOrder(root->right);
     }
 }
 
@@ -56,17 +56,17 @@ int main() {
     p1->left = p3;
     p1->right = p4;
 
-    printf("Pre-order traversal: ");
-    preOrder(p);
+    printf("Post-order traversal: ");
+    postOrder(p);
 
     int key;
-    printf("\nEnter a value to seach: ");
+    printf("\nEnter a value to search: ");
     scanf("%d", &key);
 
     if (searchInTree(p, key)) {
-        printf("Element %d found in the tree.\n", key);
+        printf("Element %d found in the graph.\n", key);
     } else {
-        printf("Element %d not found in the tree.\n", key);
+        printf("Element %d not found in the graph.\n", key);
     }
 
     return 0;
