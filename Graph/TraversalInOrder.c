@@ -4,7 +4,7 @@
 /*
  *
  * Traversal In Order: Left Subtree -> Root -> Right Subtree
- * Includes searching for a specific element
+ * Includes Searching for a specific element
  *
  * */
 
@@ -64,9 +64,9 @@ int main() {
     scanf("%d", &key);
 
     if (searchInTree(p, key)) {
-        printf("Element %d found in the graph.\n", key);
+        printf("Element %d found in the Graph.\n", key);
     } else {
-        printf("Element %d not found in the graph.\n", key);
+        printf("Element %d not found in the Graph.\n", key);
     }
 
     return 0;
